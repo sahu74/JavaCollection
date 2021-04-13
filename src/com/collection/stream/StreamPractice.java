@@ -46,5 +46,25 @@ public class StreamPractice {
 	{
 		IntStream.range(1, 4).forEach(System.out::println);
 	}
-
+	public static void printStream()
+	{/*
+		Stream.of("d2", "a2", "b1", "b3", "c").filter(s -> 
+		{
+			System.out.println("filter: " + s);
+			return true;
+		}).forEach(s -> System.out.println("forEach: " + s));
+		
+		*/
+		Stream.of("d2", "a2", "b1", "b3", "c")
+	    .map(s -> {
+	        System.out.println("map: " + s);
+	        return s.toUpperCase();
+	    })
+	    .anyMatch(s -> {
+	        System.out.println("anyMatch: " + s);
+	        return s.startsWith("A");
+	    });
+		
+		
+	}
 }

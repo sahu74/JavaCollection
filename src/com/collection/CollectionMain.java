@@ -26,9 +26,12 @@ public class CollectionMain {
 		StreamPractice.streamOf();
 		System.out.println("===========IntStrea Example=====================");
 		StreamPractice.intStreaRange();
-		*/
+		
 		Stream.of("a1A", "a2B", "a3C").map(s -> s.substring(0)).forEach(System.out::println   );
 		IntStream.range(1, 4).mapToObj( (i) -> "M" + i).forEach(System.out::println);
+		*/
+		
+		StreamPractice.printStream();
 
 	}
 
